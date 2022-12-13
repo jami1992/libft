@@ -6,7 +6,7 @@
 /*   By: jdruba <jdruba@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 17:14:29 by jdruba            #+#    #+#             */
-/*   Updated: 2022/12/13 17:34:48 by jdruba           ###   ########.fr       */
+/*   Updated: 2022/12/13 19:46:51 by jdruba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,20 +27,18 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 
 // int	main(void)
 // {
-// 	char s1[] = "This it a string";
-// 	char s2[] = "This is a string";
-// 	unsigned long n;
+// 	char			*s1 = "This";
+// 	char			*s2 = "This is a string";
+// 	unsigned long	n;
 
 // 	n = 3;
-
 // 	if (strncmp(s1, s2, n) == 0)
 // 		printf("strings are equal\n");
 // 	else if (strncmp(s1, s2, n) > 0)
 // 		printf("s1 > s2\n");
 // 	else if (strncmp(s1, s2, n) < 0)
 // 		printf("s2 > s1\n");
-
-// if (ft_strncmp(s1, s2, n) == 0)
+// 	if (ft_strncmp(s1, s2, n) == 0)
 // 		printf("strings are equal\n");
 // 	else if (ft_strncmp(s1, s2, n) > 0)
 // 		printf("s1 > s2\n");
