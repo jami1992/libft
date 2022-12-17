@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-#include <stdlib.h>
+// #include <stdio.h>
+// #include <stdlib.h>
 
 // found help here :https://www.geeksforgeeks.org/write-your-own-atoi/
 // BUT: Added handling of multiple non-numeric signs (e.g. -- etc.)
@@ -42,11 +42,11 @@ int	ft_atoi(const char *str)
 	return (sign * res);
 }
 
-int	main()
-{
-        char str1[] = "123ab";
-        char str2[] = "123ab";
+// int	main()
+// {
+//         char str1[] = "123ab";
+//         char str2[] = "123ab";
 
-        printf("orig Atoi %d\n", atoi(str1));
-        printf("my Atoi %d\n", ft_atoi(str2));
-}
+//         printf("orig Atoi %d\n", atoi(str1));
+//         printf("my Atoi %d\n", ft_atoi(str2));
+// }

@@ -38,28 +38,28 @@ NULL-Determinators.
 // int	main(void)
 // {
 // 	// original function:
-// 	char str1[] = "123456789";
-// 	bzero(str1, 4);
+// 	char str3[] = "123456789";
+// 	bzero(str3, 4);
 // 	int	i;
 
 // 	i = 0;
 // 	while(i < 8)
 // 	{
-// 		printf("%d ", str1[i]);
+// 		printf("%d ", str3[i]);
 // 		i++;
 // 	}
-// 	puts(str1);
+// 	puts(str3);
 
 // 	// testing own function:
-// 	char str2[] = "123456789";
-// 	ft_bzero(str2, 4);
+// 	char str4[] = "123456789";
+// 	ft_bzero(str4, 4);
 // 	int j;
 
 // 	j = 0;
 // 	while (j < 8)
 // 	{
-// 		printf("%d ", str2[j]);
+// 		printf("%d ", str4[j]);
 // 		j++;
 // 	}
-// 	puts(str2);
+// 	puts(str4);
 // }
