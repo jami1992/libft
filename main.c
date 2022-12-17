@@ -1,6 +1,6 @@
-# include <stdio.h>
-# include <ctype.h>
-# include "libft.h"
+#include <stdio.h>
+#include <ctype.h>
+#include "libft.h"
 int	main(void)
 {
 	char	str;
