@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <ctype.h>
 #include "libft.h"
@@ -47,5 +46,19 @@ int	main(void)
 		j++;
 	}
 	puts(str4);
-
+	/*-------------------- This is to test isalnum ------------------------*/
+	int	str5;
+	str5 = '8';
+	printf("return value is %d\n", ft_isalnum(str5));
+	printf("return value is %d\n", isalnum(str5));
+	/*-------------------- This is to test isalpha ------------------------*/
+	int	str6;
+	str6 = '9';
+	printf("return value is %d\n", ft_isalpha(str6));
+	printf("return value is %d\n", isalpha(str6));
+	/*-------------------- This is to test ft_isascii -----------------------*/
+	int	str7;
+	str7 = '8k \n';
+	printf("return value is %d\n", ft_isascii(str7));
+	printf("return value is %d\n", isascii(str7));
 }

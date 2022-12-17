@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
+// #include <ctype.h>
+// #include <stdio.h>
 
 int	ft_isalnum(int str)
 {
@@ -26,11 +26,11 @@ int	ft_isalnum(int str)
 	}
 }
 
-int	main(void)
-{
-	int	str;
+// int	main(void)
+// {
+// 	int	str;
 
-	str = '8';
-	printf("return value is %d\n", ft_isalnum(str));
-	printf("return value is %d\n", isalnum(str));
-}
+// 	str = '8';
+// 	printf("return value is %d\n", ft_isalnum(str));
+// 	printf("return value is %d\n", isalnum(str));
+// }

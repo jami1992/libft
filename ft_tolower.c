@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
+// #include <ctype.h>
+// #include <stdio.h>
 
 int	ft_tolower(int c)
 {
@@ -22,11 +22,11 @@ int	ft_tolower(int c)
 	return (c);
 }
 
-int	main(void)
-{
-	char	str;
+// int	main(void)
+// {
+// 	char	str;
 
-	str = 'Z';
-	printf("lowercase of %c is %c\n", str, ft_tolower(str));
-	printf("lowercase of %c is %c\n", str, tolower(str));
-}
+// 	str = 'Z';
+// 	printf("lowercase of %c is %c\n", str, ft_tolower(str));
+// 	printf("lowercase of %c is %c\n", str, tolower(str));
+// }

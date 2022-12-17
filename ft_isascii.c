@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
+// #include <ctype.h>
+// #include <stdio.h>
 
 int	ft_isascii(int str)
 {
@@ -25,11 +25,11 @@ int	ft_isascii(int str)
 	}
 }
 
-int	main(void)
-{
-	int	str;
+// int	main(void)
+// {
+// 	int	str;
 
-	str = '8k \n';
-	printf("return value is %d\n", ft_isascii(str));
-	printf("return value is %d\n", isascii(str));
-}
+// 	str = '8k \n';
+// 	printf("return value is %d\n", ft_isascii(str));
+// 	printf("return value is %d\n", isascii(str));
+// }

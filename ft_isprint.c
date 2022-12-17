@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
+// #include <ctype.h>
+// #include <stdio.h>
 
 int	ft_isprint(int str)
 {
@@ -25,11 +25,11 @@ int	ft_isprint(int str)
 	}
 }
 
-int	main(void)
-{
-	int	str;
+// int	main(void)
+// {
+// 	int	str;
 
-	str = ' ';
-	printf("return value is %d\n", ft_isprint(str));
-	printf("return value is %d\n", isprint(str));
-}
+// 	str = ' ';
+// 	printf("return value is %d\n", ft_isprint(str));
+// 	printf("return value is %d\n", isprint(str));
+// }

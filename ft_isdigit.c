@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
+// #include <ctype.h>
+// #include <stdio.h>
 
 int	ft_isdigit(int str)
 {
@@ -25,11 +25,11 @@ int	ft_isdigit(int str)
 	}
 }
 
-int	main(void)
-{
-	int	str;
+// int	main(void)
+// {
+// 	int	str;
 
-	str = '#';
-	printf("return value is %d\n", ft_isdigit(str));
-	printf("return value is %d\n", isdigit(str));
-}
+// 	str = '#';
+// 	printf("return value is %d\n", ft_isdigit(str));
+// 	printf("return value is %d\n", isdigit(str));
+// }

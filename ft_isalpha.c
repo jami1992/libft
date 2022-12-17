@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isalpha.c                                          :+:      :+:    :+:   */
+/*   ft_isalpha.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdruba <jdruba@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
+// #include <ctype.h>
+// #include <stdio.h>
 
 int	ft_isalpha(int str)
 {
@@ -25,11 +25,11 @@ int	ft_isalpha(int str)
 	}
 }
 
-int	main(void)
-{
-	int	str;
+// int	main(void)
+// {
+// 	int	str6;
 
-	str = '9';
-	printf("return value is %d\n", ft_isalpha(str));
-	printf("return value is %d\n", isalpha(str));
-}
+// 	str6 = '9';
+// 	printf("return value is %d\n", ft_isalpha(str6));
+// 	printf("return value is %d\n", isalpha(str6));
+// }

@@ -10,8 +10,8 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <ctype.h>
-#include <stdio.h>
+// #include <ctype.h>
+// #include <stdio.h>
 
 int	ft_toupper(int c)
 {
@@ -22,11 +22,11 @@ int	ft_toupper(int c)
 	return (c);
 }
 
-int	main(void)
-{
-	char	str;
+// int	main(void)
+// {
+// 	char	str;
 
-	str = 'e';
-	printf("uppercase of %c is %c\n", str, ft_toupper(str));
-	printf("uppercase of %c is %c\n", str, toupper(str));
-}
+// 	str = 'e';
+// 	printf("uppercase of %c is %c\n", str, ft_toupper(str));
+// 	printf("uppercase of %c is %c\n", str, toupper(str));
+// }

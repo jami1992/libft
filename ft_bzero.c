@@ -12,6 +12,7 @@
 
 // #include <string.h>
 // #include <stdio.h>
+#include <stddef.h>
 
 /*
 Thanks to this post, I found out, that you have to work with an extra variable

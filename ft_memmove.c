@@ -11,26 +11,26 @@
 /* ************************************************************************** */
 
 // THIS IS NOT WORKING!
-#include <stdio.h>
-#include <string.h>
+// #include <stdio.h>
+// #include <string.h>
 
-void    *ft_memcpy(void *restrict dst, void *restrict src, size_t n)
-{
-        size_t  i;
-        char    *d;
-        char    *s;
+// void    *ft_memcpy(void *restrict dst, void *restrict src, size_t n)
+// {
+//         size_t  i;
+//         char    *d;
+//         char    *s;
 
-        i = 0;
-        d = dst;
-        s = src;
-	// the normal memcpy stuff:
-	while (i < n)
-	{
-		d[i] = s[i];
-		i++;
-	}
-	return (d);
-}
+//         i = 0;
+//         d = dst;
+//         s = src;
+// 	// the normal memcpy stuff:
+// 	while (i < n)
+// 	{
+// 		d[i] = s[i];
+// 		i++;
+// 	}
+// 	return (d);
+// }
 /*
 https://stackoverflow.com/questions/4023320/how-to-implement-memmove-in-
 standard-c-without-an-intermediate-copy
@@ -62,48 +62,48 @@ void	*ft_memmove(void *dst, void *src, size_t len)
 	}
 
 
-int	main ()
-{
-	char	str1[50] = "This is a string that works totally fine";
-	char	str2[50] = "This is a string that works totally fine";
+// int	main ()
+// {
+// 	char	str1[50] = "This is a string that works totally fine";
+// 	char	str2[50] = "This is a string that works totally fine";
 
-	printf( "Function:\tmemmove with overlap\n" );
-    printf( "Orignal :\t%s\n",str1);
-    printf( "Source:\t\t%s\n", str1 + 5 );
-    printf( "Destination:\t%s\n", str1 + 11 );
-    memmove( str1 + 11, str1 + 5, 29 );
-    printf( "Result:\t\t%s\n", str1 );
-    printf( "Length:\t\t%lu characters\n\n", strlen( str1 ) );
+// 	printf( "Function:\tmemmove with overlap\n" );
+//     printf( "Orignal :\t%s\n",str1);
+//     printf( "Source:\t\t%s\n", str1 + 5 );
+//     printf( "Destination:\t%s\n", str1 + 11 );
+//     memmove( str1 + 11, str1 + 5, 29 );
+//     printf( "Result:\t\t%s\n", str1 );
+//     printf( "Length:\t\t%lu characters\n\n", strlen( str1 ) );
 
-    //Use of memcpy
-    printf( "Function:\tmemcpy with overlap\n" );
-    printf( "Orignal :\t%s\n",str2);
-    printf( "Source:\t\t%s\n", str2 + 5 );
-    printf( "Destination:\t%s\n", str2 + 11 );
-    memcpy( str2 + 11, str2 + 5, 29 );
-    printf( "Result:\t\t%s\n", str2 );
-    printf( "Length:\t\t%lu characters\n\n", strlen( str2 ) );
+//     //Use of memcpy
+//     printf( "Function:\tmemcpy with overlap\n" );
+//     printf( "Orignal :\t%s\n",str2);
+//     printf( "Source:\t\t%s\n", str2 + 5 );
+//     printf( "Destination:\t%s\n", str2 + 11 );
+//     memcpy( str2 + 11, str2 + 5, 29 );
+//     printf( "Result:\t\t%s\n", str2 );
+//     printf( "Length:\t\t%lu characters\n\n", strlen( str2 ) );
 
-	char	str3[50] = "This is a s#ring that works totally fine";
-	char	str4[50] = "This is a string that works totally fine";
+// 	char	str3[50] = "This is a s#ring that works totally fine";
+// 	char	str4[50] = "This is a string that works totally fine";
 	
-	//using my own memmove
-	printf( "Function:\town memmove with overlap\n" );
-    printf( "Orignal :\t%s\n",str3);
-    printf( "Source:\t\t%s\n", str3 + 5 );
-    printf( "Destination:\t%s\n", str3 + 11 );
-    ft_memmove( str3 + 11, str3 + 5, 29 );
-    printf( "Result:\t\t%s\n", str3 );
-    printf( "Length:\t\t%lu characters\n\n", strlen( str3 ) );
+// 	//using my own memmove
+// 	printf( "Function:\town memmove with overlap\n" );
+//     printf( "Orignal :\t%s\n",str3);
+//     printf( "Source:\t\t%s\n", str3 + 5 );
+//     printf( "Destination:\t%s\n", str3 + 11 );
+//     ft_memmove( str3 + 11, str3 + 5, 29 );
+//     printf( "Result:\t\t%s\n", str3 );
+//     printf( "Length:\t\t%lu characters\n\n", strlen( str3 ) );
 
-    //Use of my own memcpy
-    printf( "Function:\town memcpy with overlap\n" );
-    printf( "Orignal :\t%s\n",str4);
-    printf( "Source:\t\t%s\n", str4 + 5 );
-    printf( "Destination:\t%s\n", str4 + 11 );
-    ft_memcpy( str4 + 11, str4 + 5, 29 );
-    printf( "Result:\t\t%s\n", str4 );
-    printf( "Length:\t\t%lu characters\n\n", strlen( str4 ) );
+//     //Use of my own memcpy
+//     printf( "Function:\town memcpy with overlap\n" );
+//     printf( "Orignal :\t%s\n",str4);
+//     printf( "Source:\t\t%s\n", str4 + 5 );
+//     printf( "Destination:\t%s\n", str4 + 11 );
+//     ft_memcpy( str4 + 11, str4 + 5, 29 );
+//     printf( "Result:\t\t%s\n", str4 );
+//     printf( "Length:\t\t%lu characters\n\n", strlen( str4 ) );
 
-    return 0;
-}
+//     return 0;
+// }
