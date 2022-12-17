@@ -12,6 +12,7 @@
 
 // #include <stdio.h>
 // #include <string.h>
+#include <stddef.h>
 
 // locates the last occurence of c in s
 char	*ft_strrchr(char *s, int c)

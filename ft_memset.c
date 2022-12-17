@@ -12,6 +12,7 @@
 
 // #include <string.h>
 // #include <stdio.h>
+#include <stddef.h>
 
 void	*ft_memset(char *b, int c, size_t len)
 {

@@ -12,6 +12,7 @@
 
 // #include <stdio.h>
 // #include <string.h>
+#include <stddef.h>
 
 /*https://stackoverflow.com/questions/18853054/building-memcmp-function-in-c
 */
@@ -20,8 +21,8 @@ int	ft_memcmp(void *s1, void *s2, size_t n)
 	unsigned char	*p;
 	unsigned char	*q;
 
-	*p = s1;
-	*q = s2;
+	p = s1;
+	q = s2;
 	while (n > 0)
 	{
 		if (n > 0)

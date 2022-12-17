@@ -13,7 +13,7 @@ void	*ft_memset(char *b, int c, size_t len);
 char	*ft_strchr(char *s, int c);
 int     ft_strlen(char *str);
 int     ft_strncmp(const char *s1, const char *s2, size_t n);
-char	*ft_strnstr(char *haystack, char *needle, size_t len)
+char	*ft_strnstr(char *haystack, char *needle, size_t len);
 char	*ft_strrchr(char *s, int c);
 int	    ft_tolower(int c);
 int     ft_toupper(int c);

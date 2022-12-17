@@ -12,6 +12,7 @@
 
 // #include <stdio.h>
 // #include <string.h>
+#include <stddef.h>
 
 void	*ft_memchr(char *s, int c, size_t n)
 {

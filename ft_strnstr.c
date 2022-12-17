@@ -12,6 +12,7 @@
 
 // #include <stdio.h>
 // #include <string.h>
+#include <stddef.h>
 
 char	*ft_strnstr(char *haystack, char *needle, size_t len)
 {

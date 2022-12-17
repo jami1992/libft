@@ -13,6 +13,7 @@
 // THIS IS NOT WORKING!
 // #include <stdio.h>
 // #include <string.h>
+#include <stddef.h>
 
 // void    *ft_memcpy(void *restrict dst, void *restrict src, size_t n)
 // {
