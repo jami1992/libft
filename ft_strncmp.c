@@ -6,43 +6,67 @@
 /*   By: jdruba <jdruba@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 17:14:29 by jdruba            #+#    #+#             */
-/*   Updated: 2022/12/13 19:46:51 by jdruba           ###   ########.fr       */
+/*   Updated: 2022/12/30 16:01:05 by jdruba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <stdio.h>
-// #include <string.h>
-#include <stddef.h>
+#include "libft.h"
+
+/*
+Description:
+The strncmp function compares not more than n characters (characters that 
+follow a null character are not compared) from the array pointed to by s1 
+to the array pointed to by s2.
+
+Return Value:
+The strncmp function returns an integer greater than, equal to, or less 
+than zero, accordingly as the possibly null-terminated array pointed to 
+by s1 is greater than, equal to, or less than the possibly null-terminated 
+array pointed to by s2.
+
+Own Words:
+-	We have two strings (arrays of chars): s1 and s2
+-	We have a number n that tells us for how many signs to compare s1 and s2
+-	if there is a difference in the first n chars, the string that has the
+	higher ascii-value at the position of the first difference is "greater".
+
+Implementation:
+-	We include libft.h, because we want to use size_t definition (-> stddef)
+	is included in libft.h
+-	We iterate as long as n is not reached.
+-	At each iteration we check for negative ASCII-Values (like \200 etc.)
+-	if we have a negative ASCII-Value, the opposite of the normal return value
+ 	is returned
+-	if s1-ASCII-Value is below s2 ASCII-Value at position of pointer, -1 is
+	returned
+-	if s2-ASCII-Value is below s1 ASCII-VALUE at position of pointer, 1 is
+	returned
+-	pointer of s1 and s2 are increased. n is decreased.
+-	final return statement to avoid compiler errors.
+*/
 
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned long	i;
-
-	i = 0;
-	while (s1[i] == s2[i] && i < n && s1[i] != '\0' && s2[i] != '\0')
+	while (n > 0)
 	{
-		i++;
+		if (*s1 < 0)
+			return (1);
+		if (*s2 < 0)
+			return (-1);
+		if (*s1 < *s2)
+			return (-1);
+		if (*s1 > *s2)
+			return (1);
+		if (*s1 == '\0')
+			return (0);
+		s1++;
+		s2++;
+		n--;
 	}
-	return (s1[i] - s2[i]);
+	return (0);
 }
 
-// int	main(void)
+// int main(void)
 // {
-// 	char			*s1 = "This";
-// 	char			*s2 = "This is a string";
-// 	unsigned long	n;
-
-// 	n = 3;
-// 	if (strncmp(s1, s2, n) == 0)
-// 		printf("strings are equal\n");
-// 	else if (strncmp(s1, s2, n) > 0)
-// 		printf("s1 > s2\n");
-// 	else if (strncmp(s1, s2, n) < 0)
-// 		printf("s2 > s1\n");
-// 	if (ft_strncmp(s1, s2, n) == 0)
-// 		printf("strings are equal\n");
-// 	else if (ft_strncmp(s1, s2, n) > 0)
-// 		printf("s1 > s2\n");
-// 	else if (ft_strncmp(s1, s2, n) < 0)
-// 		printf("s2 > s1\n");
+// 	ft_strncmp("test\200", "test\0", 6);
 // }

@@ -6,32 +6,54 @@
 /*   By: jdruba <jdruba@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 20:10:52 by jdruba            #+#    #+#             */
-/*   Updated: 2022/12/14 20:37:02 by jdruba           ###   ########.fr       */
+/*   Updated: 2022/12/29 19:08:28 by jdruba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-// #include <string.h>
-// #include <stdio.h>
-#include <stddef.h>
+#include "libft.h"
 
-void	*ft_memset(char *b, int c, size_t len)
+/*
+Description:
+The memset() function writes len bytes of value c (converted to an 
+unsigned char) to the string b.
+
+Return Values:
+The memset function returns the value of b.
+
+Own words:
+we have a string b.
+we have an ascii stored in c
+we fill the string b with the ascii stored in c
+we only do this for the first len bytes.
+
+Implementation:
+-	first, I created copys for c and b (to avoid casting. I do
+	not like casting due to readability).
+-	I iterate through b_copy (which points to b).
+-	c_copy is stored where b_copy points to (b)
+-	increment b_copy and decrement length.
+-	return b - now filled with c for len positions.
+*/
+
+void	*ft_memset(void *b, int c, size_t len)
 {
-	size_t	i;
+	const unsigned char	c_copy = c;
+	unsigned char		*b_copy;
 
-	i = 0;
-	if (b == 0)
-		return (0);
-	while (i < len)
+	b_copy = b;
+	while (len > 0)
 	{
-		*(unsigned char *)(b) = (unsigned char)c;
-		i++;
+		*b_copy = c_copy;
+		b_copy++;
+		len--;
 	}
 	return (b);
 }
 
 // int	main(void)
 // {
-// 	char buffer[2];
-// 	printf("original\t%s\n", memset(buffer, 'a', 1));
-// 	printf("own\t\t%s\n", ft_memset(buffer, 'a', 1));
+// 	char s1[] = "abcdefghijklmnopqrstuvwxyz";
+// 	char s2[] = "abcdefghijklmnopqrstuvwxyz";
+// 	memset(s1, 'a', 1);
+// 	ft_memset(s2, 'a', 1);
 // }

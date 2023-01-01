@@ -6,25 +6,49 @@
 /*   By: jdruba <jdruba@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 10:36:12 by jdruba            #+#    #+#             */
-/*   Updated: 2022/12/13 13:44:15 by jdruba           ###   ########.fr       */
+/*   Updated: 2022/12/27 22:12:02 by jdruba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
 // #include <string.h>
-#include <stddef.h>
 
-char	*ft_strchr(char *s, int c)
+/*
+Description: 
+The strchr function locates the first occurrence of c 
+(converted to a char) in the string pointed to by s. The terminating null 
+character is considered to be part of the string.
+
+Return Value:
+The strchr function returns a pointer to the located character, 
+or a null pointer if the character does not occur in the string.
+
+Own words: 
+We have a string s. We havea char c.
+The strchr returns a pointer to the first occurence of c in s.
+If there is no c in s, the return value is null.
+If c is in s, the return value is a pointer to the located character.
+
+Implementation:
+- 	first I copy c to c_copy, to avoid memory leaks.
+- 	then I iterate the pointer through s. 
+	+	If the pointer points to the null determinator, I return 0.
+		This is finally the case if c is not in s.
+	+	If c is in s the while loop stops. Then s is casted to char
+		pointer and returned.
+*/
+
+char	*ft_strchr(const char *s, int c)
 {
-	while (*s != c)
+	const char	c_copy = c;
+
+	while (*s != c_copy)
 	{
-		s++;
-		if (*s == '\0' && c != '\0')
-			return (NULL);
-		if (*s == '\0' && c == '\0')
-			return (s);
+		if (*s == '\0')
+			return (0);
+	s++;
 	}
-	return (s);
+	return ((char *)s);
 }
 
 // int main(void)

@@ -6,27 +6,44 @@
 /*   By: jdruba <jdruba@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 18:04:39 by jdruba            #+#    #+#             */
-/*   Updated: 2022/12/13 19:48:53 by jdruba           ###   ########.fr       */
+/*   Updated: 2022/12/30 16:04:28 by jdruba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
 // #include <string.h>
-#include <stddef.h>
+#include "libft.h"
 
-void	*ft_memchr(char *s, int c, size_t n)
+/*
+Description:
+"The memchr function locates the first occurrence of c 
+(converted to an unsigned char) in the initial n characters 
+(each interpreted as unsigned char) of the object pointed to by s."
+
+Own Words:
+1. We have a ascii-something saved in c. We have a string s.
+We want to find the first occurence of c in the string.
+We make sure to avoid memory leaks by using copies (temp 1 and temp2)
+We do not work with null determ, because the string can, by definition,
+contain null determinators (Plauger, 1991, S. 394)
+
+Implementation:
+In the beginning s_copy points to the begin of s. Then it iterates throug
+s. It does only iterate as long as the number of iterations at maximum n.
+*/
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t	i;
+	const unsigned char	c_copy = c;
+	const unsigned char	*s_copy = s;
 
-	i = 0;
-	while (*s != c && i < n)
+	while (n > 0)
 	{
-		i++;
-		s++;
+		if (*s_copy == c_copy)
+			return ((void *) s_copy);
+		s_copy++;
+		n--;
 	}
-	if (i >= n)
-		return (NULL);
-	return (s);
+	return (0);
 }
 
 // int	main(void)

@@ -1,28 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   isprint.c                                          :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: jdruba <jdruba@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 09:30:16 by jdruba            #+#    #+#             */
-/*   Updated: 2022/12/13 09:44:18 by jdruba           ###   ########.fr       */
+/*   Updated: 2022/12/29 19:43:07 by jdruba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <ctype.h>
 // #include <stdio.h>
 
-int	ft_isprint(int str)
+// it is possible to work without if else statements, here. But this is a
+// norme violation:
+// int	ft_isprint(int str)
+// {
+// 	return (str > 31 && str < 127);
+// }
+
+/*
+Description:
+The isprint function tests for any printing character including space (' ').
+
+Return Value:
+return nonzero (true) if and only if the value of the argument c is printable.
+
+Implementation:
+-	check if char is between 32 and 126 (each included). If so: return 1
+	otherwise: return 0.
+*/
+
+int	ft_isprint(int c)
 {
-	if ((str >= 32) && (str <= 126))
-	{
+	if (c > 31 && c < 127)
 		return (1);
-	}
-	else
-	{
-		return (0);
-	}
+	return (0);
 }
 
 // int	main(void)

@@ -6,18 +6,32 @@
 /*   By: jdruba <jdruba@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 20:38:35 by jdruba            #+#    #+#             */
-/*   Updated: 2022/12/15 10:50:55 by jdruba           ###   ########.fr       */
+/*   Updated: 2022/12/29 19:43:08 by jdruba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <string.h>
 // #include <stdio.h>
-#include <stddef.h>
+#include "libft.h"
 
 /*
 Thanks to this post, I found out, that you have to work with an extra variable
 you can not work directly with void *s
 https://stackoverflow.com/questions/29182966/do-you-have-a-simple-bzero-example
+
+Description:
+The bzero() function writes n zeroed bytes to the string s.  
+If n is zero, bzero() does nothing.
+
+Return Value:
+none. Void function...
+
+Implementation:
+-	create counter i and char pointer c (as direct manipulation of s does
+	not work).
+-	iterate through c by increasing i (limited by n)
+-	write null determinator to the memory c[i] points to (which is pointed
+	to by *s).
 */
 void	ft_bzero(void *s, size_t n)
 {

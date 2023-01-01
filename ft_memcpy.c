@@ -6,29 +6,49 @@
 /*   By: jdruba <jdruba@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 11:18:14 by jdruba            #+#    #+#             */
-/*   Updated: 2022/12/15 11:48:49 by jdruba           ###   ########.fr       */
+/*   Updated: 2022/12/29 19:43:59 by jdruba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
 // #include <string.h>
-#include <stddef.h>
+#include "libft.h"
 
-void	*ft_memcpy(void *restrict dst, void *restrict src, size_t n)
+/*
+Documentation:
+The memcpy() function copies n bytes from memory area src to memory area dst.
+If dst and src overlap, behavior is undefined.
+Applications in which dst and src might overlap should use memmove(3) instead.
+
+Return Values:
+The memcpy() function returns the original value of dst.
+
+Implementation:
+-	creating variable i to iterate through destination area. As it caused
+	problems to work with src and dst directly, I created pointers, that point
+	to dst and src (and casted dst and src to char*).
+-	Then the while loop iterates through dst (pointed to by d) and
+	replaces the content of each memory address with the content of src 
+	(at position i, each).
+-	pointer to dst is returned.
+*/
+void	*ft_memcpy(void *dst, const void *src, size_t n)
 {
 	size_t	i;
 	char	*d;
 	char	*s;
 
+	if (dst == NULL && src == NULL)
+		return (0);
 	i = 0;
-	d = dst;
-	s = src;
+	d = (char *)dst;
+	s = (char *)src;
 	while (i < n)
 	{
 		d[i] = s[i];
 		i++;
 	}
-	return (d);
+	return (dst);
 }
 
 // int	main(void)
