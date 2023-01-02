@@ -6,7 +6,7 @@
 /*   By: jdruba <jdruba@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/22 18:41:40 by jdruba            #+#    #+#             */
-/*   Updated: 2022/12/31 13:26:37 by jdruba           ###   ########.fr       */
+/*   Updated: 2023/01/02 17:16:20 by jdruba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -104,12 +104,13 @@ char	*ft_itoa(int n)
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
 	if (n < 0)
-	{
 		sign = 1;
+	if (n < 0)
 		n = n * -1;
-	}
 	charlen = ft_intlen(n) + sign + 1;
-	c = malloc(charlen);
+	c = malloc (charlen);
+	if (!c)
+		return (0);
 	c[charlen - 1] = '\0';
 	while (i < charlen - 1)
 	{

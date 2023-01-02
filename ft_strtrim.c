@@ -6,7 +6,7 @@
 /*   By: jdruba <jdruba@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/22 16:39:19 by jdruba            #+#    #+#             */
-/*   Updated: 2022/12/31 13:27:06 by jdruba           ###   ########.fr       */
+/*   Updated: 2023/01/02 17:04:07 by jdruba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -92,8 +92,12 @@ static char	*ft_create_str(char const *s1, char const *set)
 	int		ende;
 
 	l = 0;
+	if (!set || !s1)
+		return (0);
 	ende = ft_strtrim_frombehind(s1, set);
 	newstring = malloc(ende + 1);
+	if (!newstring)
+		return (0);
 	while (l < ende)
 	{
 		newstring[l] = *s1;

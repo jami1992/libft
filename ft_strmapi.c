@@ -6,7 +6,7 @@
 /*   By: jdruba <jdruba@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 10:54:57 by jdruba            #+#    #+#             */
-/*   Updated: 2022/12/31 13:30:32 by jdruba           ###   ########.fr       */
+/*   Updated: 2023/01/02 17:23:02 by jdruba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	char	*ret;
 
 	ret = ft_strdup(s);
-	if (!s || !f)
+	if (!s || !f || !ret)
 		return (0);
 	if (s)
 	{

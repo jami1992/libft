@@ -6,7 +6,7 @@
 /*   By: jdruba <jdruba@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 20:42:34 by jdruba            #+#    #+#             */
-/*   Updated: 2022/12/31 14:15:23 by jdruba           ###   ########.fr       */
+/*   Updated: 2023/01/02 16:53:13 by jdruba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (ft_strlen(s) < len)
 		len = ft_strlen(s);
 	substring = malloc(len + 1);
-	if (!(s || substring))
+	if (!(s || substring) || !(s && substring))
 		return (0);
 	while (s[i])
 	{
