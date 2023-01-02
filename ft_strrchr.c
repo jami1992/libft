@@ -6,7 +6,7 @@
 /*   By: jdruba <jdruba@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 13:45:29 by jdruba            #+#    #+#             */
-/*   Updated: 2022/12/30 15:59:46 by jdruba           ###   ########.fr       */
+/*   Updated: 2023/01/02 17:42:16 by jdruba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,7 @@ char	*ft_strrchr(const char *s, int c)
 	const char	c_copy = c;
 	const char	*s_copy = NULL;
 
-	while (1 < 10)
+	while (42)
 	{
 		if (*s == c_copy)
 			s_copy = s;
