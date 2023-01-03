@@ -6,7 +6,7 @@
 /*   By: jdruba <jdruba@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 11:49:52 by jdruba            #+#    #+#             */
-/*   Updated: 2022/12/31 14:05:33 by jdruba           ###   ########.fr       */
+/*   Updated: 2023/01/03 11:55:18 by jdruba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,14 +47,15 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 
 	dst_copy = dst;
 	src_copy = src;
+	if (dst == src)
+		return (dst);
 	if (src_copy < dst_copy && dst_copy < src_copy + len)
 	{
 		dst_copy = dst_copy + len;
 		src_copy = src_copy + len;
-		while (len > 0)
+		while (len > 0 && len--)
 		{
 			*--dst_copy = *--src_copy;
-			len--;
 		}
 	}
 	else
