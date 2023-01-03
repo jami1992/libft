@@ -6,7 +6,7 @@
 /*   By: jdruba <jdruba@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 10:54:57 by jdruba            #+#    #+#             */
-/*   Updated: 2023/01/02 17:23:02 by jdruba           ###   ########.fr       */
+/*   Updated: 2023/01/03 16:59:08 by jdruba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,3 +57,14 @@ char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	}
 	return (ret);
 }
+
+// char f (unsigned int i, char c)
+// {
+// 	i = 0;
+// 	return (toupper(c + i));
+// }
+// int main ()
+// {
+// 	char const *hw = "hello world";
+// 	printf("%s",ft_strmapi(hw ,f));
+// }

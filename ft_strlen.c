@@ -6,7 +6,7 @@
 /*   By: jdruba <jdruba@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 09:42:57 by jdruba            #+#    #+#             */
-/*   Updated: 2022/12/29 18:34:54 by jdruba           ###   ########.fr       */
+/*   Updated: 2023/01/03 15:39:10 by jdruba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,8 +41,8 @@ size_t	ft_strlen(const char *s)
 
 // int	main(void)
 // {
-// 	char	str[] = "";
+// 	char	str[] = "hello world!";
 
-// 	printf("String has length %d\n", ft_strlen(str));
-// 	printf("String has length %lu\n", strlen(str));
+// 	printf("String has length %zu\n", ft_strlen(str));
+// 	printf("String has length %zu\n", strlen(str));
 // }

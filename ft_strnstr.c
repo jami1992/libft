@@ -6,7 +6,7 @@
 /*   By: jdruba <jdruba@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 12:37:37 by jdruba            #+#    #+#             */
-/*   Updated: 2022/12/30 16:20:00 by jdruba           ###   ########.fr       */
+/*   Updated: 2023/01/03 16:05:32 by jdruba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -74,9 +74,9 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 
 // int	main(void)
 // {
-// 	char *haystack[] = "Dolor ipsum bla";
-// 	char *needle[] = "ipsum";
-// 	printf("original:\t\t%s\n", strnstr(haystack, needle, -1) == haystack + 1);
-// 	printf("own:\t\t\t%s\n", ft_strnstr(haystack, needle, -1) == haystack + 1);
+// 	const char haystack[] = "Dolor ipsum and so on";
+// 	const char needle[] = "ipsum";
+// 	printf("original:\t\t%s\n", strnstr(haystack, needle, 11));
+// 	printf("own:\t\t\t%s\n", ft_strnstr(haystack, needle, 11));
 // 	return (0);
 // }

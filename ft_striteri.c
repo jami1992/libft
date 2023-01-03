@@ -6,7 +6,7 @@
 /*   By: jdruba <jdruba@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 11:29:58 by jdruba            #+#    #+#             */
-/*   Updated: 2023/01/03 13:03:53 by jdruba           ###   ########.fr       */
+/*   Updated: 2023/01/03 17:00:14 by jdruba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -62,3 +62,14 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 		}
 	}
 }
+
+// char f (unsigned int i, char c)
+// {
+// 	i = 0;
+// 	return (toupper(c + i));
+// }
+// int main ()
+// {
+// 	char const *hw = "hello world";
+// 	printf("%s",ft_strmapi(hw ,f));
+// }

@@ -6,7 +6,7 @@
 /*   By: jdruba <jdruba@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 17:14:29 by jdruba            #+#    #+#             */
-/*   Updated: 2022/12/30 16:01:05 by jdruba           ###   ########.fr       */
+/*   Updated: 2023/01/03 15:59:30 by jdruba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,5 +68,14 @@ int	ft_strncmp(const char *s1, const char *s2, size_t n)
 
 // int main(void)
 // {
-// 	ft_strncmp("test\200", "test\0", 6);
+// 	const char s1[] = "hello aorld!";
+// 	const char s2[] = "hello mars!";
+// 	int i;
+
+// 	i = 7;
+// 	printf("%d\n",strncmp(s1, s2, i));
+// 	printf("%d\n",ft_strncmp(s1, s2, i));
+// 	// i = 8;
+// 	// printf("%d\n",strncmp(s1, s2, i));
+// 	// printf("%d\n",ft_strncmp(s1, s2, i));
 // }

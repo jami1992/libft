@@ -6,7 +6,7 @@
 /*   By: jdruba <jdruba@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 22:11:15 by jdruba            #+#    #+#             */
-/*   Updated: 2023/01/03 13:10:03 by jdruba           ###   ########.fr       */
+/*   Updated: 2023/01/03 13:31:00 by jdruba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i = 0;
 	j = 0;
-	if (!(ft_strlen(s1) || ft_strlen(s2)))
+	if (!(s1) || !s2)
 		return (0);
 	p = malloc(ft_strlen(s1) + ft_strlen(s2) + 1);
 	if (!p)

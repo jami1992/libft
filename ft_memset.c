@@ -6,7 +6,7 @@
 /*   By: jdruba <jdruba@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 20:10:52 by jdruba            #+#    #+#             */
-/*   Updated: 2022/12/29 19:08:28 by jdruba           ###   ########.fr       */
+/*   Updated: 2023/01/03 14:55:00 by jdruba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,10 @@ void	*ft_memset(void *b, int c, size_t len)
 // {
 // 	char s1[] = "abcdefghijklmnopqrstuvwxyz";
 // 	char s2[] = "abcdefghijklmnopqrstuvwxyz";
-// 	memset(s1, 'a', 1);
-// 	ft_memset(s2, 'a', 1);
+// 	printf("%s\n", s1);
+// 	printf("%s\n", s2);
+// 	memset(s1, 'a', 5);
+// 	ft_memset(s2, 'a', 5);
+// 	printf("%s\n", s1);
+// 	printf("%s\n", s2);
 // }

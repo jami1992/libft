@@ -6,7 +6,7 @@
 /*   By: jdruba <jdruba@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 16:28:06 by jdruba            #+#    #+#             */
-/*   Updated: 2023/01/02 16:45:06 by jdruba           ###   ########.fr       */
+/*   Updated: 2023/01/03 16:34:58 by jdruba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,105 +103,9 @@ char	**ft_split(char const *s, char c)
 	return (arr);
 }
 
-// int	main(void)
-// {
-// 	ft_split("lorem ipsum dolor sit amet, consectetur", ' ');
-// }
-
-// my old version (not working perfectly):
-// #include "libft.h"
-
-// // #include <stdlib.h>
-// // #include <stdio.h>
-
-// // static int ft_strlen(const char *c)
-// // {
-// // 	int i;
-// // 	i = 0;
-// // 	while (c[i])
-// // 	{
-// // 		i++;
-// // 	}
-// // 	return(i);
-// // }
-
-// int ft_strlen_del(char const *s, char c, int i)
-// {
-// 	int j;
-// 	j = i; // to store the old i
-// 	while (s[i] != c && s[i] != '\0')
-// 	{
-// 		i--;
-// 	}
-// 	return (j - i);
-// }
-
-// static unsigned int ft_count_substrings(const char *s, char c)
-// {
-// 	int i;
-// 	int number_of_substrings;
-
-// 	number_of_substrings = 0;
-// 	i = 0;
-// 	while (s[i])
-// 	{
-// 		if(s[i] == c)
-// 			i++;
-// 		else {
-// 			number_of_substrings++;
-// 			while(s[i] && s[i] != c)
-// 				i++;
-// 		}
-// 	}
-// 	return (number_of_substrings);
-// }
-
-// char **ft_split(char const *s, char c)
-// {
-// 	//first: count occurences of delimiter to know how many strings are needed.
-// 	int	i; // i will be the length of s
-// 	int substr_l;
-// 	int	number_of_substrings; // this will be the number of substrings
-// 	char **arr; // this is the array in which I will store the substrings
-
-// 	substr_l = 0; // substr_l will be the counter that counts until each 
-//delimiter
-// 	number_of_substrings = ft_count_substrings(s, c);
-
-// 	if(!s)
-// 		return (0);
-// 	// first I have to allocate enough memory for the number of pointers 
-//(substrings),
-// 	// I will have. Then I add one to store the null determinator
-// 	arr = (char**)malloc((number_of_substrings + 1) * sizeof(char*));
-// 	arr[number_of_substrings] = NULL;
-// 	if(!arr)
-// 		return(0);
-// 	i = ft_strlen(s) - 1; 
-// 	while (number_of_substrings > 0)
-// 	{
-// 		while (s[i] && s[i] == c)
-// 			i--;
-// 		substr_l = ft_strlen_del(s,c, i);
-// 		//printf("substring length:%d\n", substr_l);
-// 		number_of_substrings--;
-// 		arr[number_of_substrings] = (char *)malloc((substr_l) * sizeof(char)); 
-// malloc memory for each substring . begin at the end.
-// 		// finally fill the array....
-// 		while(substr_l > 0)
-// 		{
-// 			arr[number_of_substrings][substr_l -1] = s[i];
-// 			if(!arr[number_of_substrings])
-// 				return(0);
-// 			substr_l--;
-// 			i--;
-// 		}
-// 		//printf("result: %s\n", arr[number_of_substrings]);
-// 	}
-// 	return(arr);
-// }
-
-// int	main(void)
-// {
-// 	ft_split("lorem ipsum dolor sit amet, consectetur", ' ');
+// int main () {
+// 	char * splitme = "This is a string";
+// 	char **ptr = ft_split(splitme, ' ');
+// 	while (*ptr && printf("%s\n", *ptr))
+// 		ptr++;
 // }

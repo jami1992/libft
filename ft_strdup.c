@@ -6,7 +6,7 @@
 /*   By: jdruba <jdruba@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 08:14:10 by jdruba            #+#    #+#             */
-/*   Updated: 2022/12/28 17:29:55 by jdruba           ###   ########.fr       */
+/*   Updated: 2023/01/03 16:38:09 by jdruba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,7 +57,10 @@ char	*ft_strdup(const char *s1)
 	return (c);
 }
 
-//  int	main(void)
-//  {
-// 	ft_strdup("");
-//  }
+// int main(void)
+// {
+// 	const char st[] ="hello world";
+// 	printf("%s\n",ft_strdup(st));
+// 	printf("%s",strdup(st));
+// 	printf("\n");
+// }

@@ -6,7 +6,7 @@
 /*   By: jdruba <jdruba@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 10:36:12 by jdruba            #+#    #+#             */
-/*   Updated: 2023/01/03 13:03:43 by jdruba           ###   ########.fr       */
+/*   Updated: 2023/01/03 16:40:09 by jdruba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,31 +52,34 @@ char	*ft_strchr(const char *s, int c)
 	return ((char *)s);
 }
 
-// int main(void)
+// int	main(void)
 // {
-// 	char tweet[] = "this is my @mention";
-// 	char *mention1 = strchr(tweet, '@');
-// 	char *mention2 = ft_strchr(tweet, '@');
+// 	char tweet[] = "this is my @menti@n";
+// 	char *mention1 = strrchr(tweet, '@');
+// 	char *mention2 = ft_strrchr(tweet, '@');
 
 // 	// /* returns a pointer to the position of @ so it 
 // 	// returns a substring */
-// 	printf("original from mention \t%s\n", mention1);
-// 	printf("my own from mention \t%s\n", mention2);
-// 	printf("addr of orig. mention %p\n", mention1);
-// 	printf("addr of orig. mention %p\n", tweet +11);
-// 	printf("addr of my mention %p\n", mention2);
-// 	printf("addr of my mention %p\n", tweet + 11);
+// 	printf("original from mention \t\t\t%s\n", mention1);
+// 	printf("my own from mention \t\t\t%s\n\n", mention2);
+
+// 	printf("addr of orig. mention \t\t\t%p\n", mention1);
+// 	printf("addr of orig. mention \t\t\t%p\n\n", tweet + 17);
+
+// 	printf("addr of my mention \t\t\t%p\n", mention2);
+// 	printf("addr of my mention \t\t\t%p\n\n", tweet + 17);
 // 	// mention[0] = '+'; /*changes here change the original string, because 
 // 	// we are working with pointers!*/
 // 	// /*if the substring is not found in the string, NULL is returned:*/
-// 	if(strchr(tweet, '#') == NULL)
-// 		printf("original strchr returned\tNULL\n");
-// 	if(ft_strchr(tweet, '#') == NULL)
-// 		printf("my own strchr returned\t\tNULL\n");
-// 	printf("address with original:\t%p\n", strchr(tweet, '@'));
-// 	printf("address with myown:\t%p\n", ft_strchr(tweet, '@'));
+// 	if(strrchr(tweet, '#') == NULL)
+// 		printf("original strchr returned\t\tNULL\n");
+// 	if(ft_strrchr(tweet, '#') == NULL)
+// 		printf("my own strchr returned\t\t\tNULL\n\n");
+// 	printf("address with original:\t\t\t%p\n", strrchr(tweet, '@'));
+// 	printf("address with myown:\t\t\t%p\n\n", ft_strrchr(tweet, '@'));
 
-// 	printf("addr of nulldeterm with original: \t%p\n", strchr(tweet, '\0'));
-// 	printf("addr of nulldeterm with my own: \t%p\n", ft_strchr(tweet, '\0'));
+// 	printf("addr of nulldeterm with original: \t%p\n", strrchr(tweet, '\0'));
+// 	printf("addr of nulldeterm with my own: \t%p\n", ft_strrchr(tweet, '\0'));
+
 // 	return (0);
 // }

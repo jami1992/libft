@@ -6,7 +6,7 @@
 /*   By: jdruba <jdruba@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 20:42:34 by jdruba            #+#    #+#             */
-/*   Updated: 2023/01/02 16:53:13 by jdruba           ###   ########.fr       */
+/*   Updated: 2023/01/03 16:18:08 by jdruba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,5 +68,5 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 // int	main()
 // {
-// 	printf("%s\n", ft_substr("hola", 0, 18446744073709551615));
+// 	printf("%s\n", ft_substr("hola", 0, 5));
 // }

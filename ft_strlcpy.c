@@ -6,7 +6,7 @@
 /*   By: jdruba <jdruba@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 10:40:28 by jdruba            #+#    #+#             */
-/*   Updated: 2023/01/03 13:10:09 by jdruba           ###   ########.fr       */
+/*   Updated: 2023/01/03 15:37:13 by jdruba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 /*
 Description:
 strlcpy() copies up to dstsize - 1 characters from the string src to dst, 
-NUL-terminating the result if dstsize is not 0.
+NULL-terminating the result if dstsize is not 0.
 
 Return Value:
 total length of the string, tried to create.
@@ -38,7 +38,7 @@ Implementation:
 -	j is returned.
 */
 
-int	ft_strlcpy(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
 	size_t	j;
@@ -57,7 +57,10 @@ int	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 	return (j);
 }
 
-//  int main(void)
+// int main(void)
 // {
-// 	ft_strlcpy("Hallo Welt",  "", 15);
+// 	char d[] = "Hello World";
+// 	char s[] = "Sun";
+// 	printf("%lu\n",strlcpy(d,  s, 6));
+// 	printf("%lu\n",ft_strlcpy(d,  s, 6));
 // }

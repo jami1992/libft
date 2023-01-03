@@ -6,7 +6,7 @@
 /*   By: jdruba <jdruba@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 23:47:52 by jdruba            #+#    #+#             */
-/*   Updated: 2022/12/28 18:31:59 by jdruba           ###   ########.fr       */
+/*   Updated: 2023/01/03 15:24:17 by jdruba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,7 +46,7 @@ Implementation:
 	i bytes).
 -	null determination is handled by strlcpy function.
 */
-int	ft_strlcat(char *dst, const char *src, size_t dstsize)
+size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
 	size_t	i;
 
@@ -66,5 +66,5 @@ int	ft_strlcat(char *dst, const char *src, size_t dstsize)
 
 // int	main()
 // {
-// 	printf("%d\n", ft_strlcat("rrrrrrrrrrrrrrr", "source_string", 5));
+// 	printf("%d\n", ft_strlcat("12345", "String with 19 char", 5));
 // }
