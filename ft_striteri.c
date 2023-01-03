@@ -6,10 +6,11 @@
 /*   By: jdruba <jdruba@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/29 11:29:58 by jdruba            #+#    #+#             */
-/*   Updated: 2023/01/02 16:32:08 by jdruba           ###   ########.fr       */
+/*   Updated: 2023/01/03 13:03:53 by jdruba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 /*
 Description:
 Applies the function ’f’ on each character of the string passed as argument, 

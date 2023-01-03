@@ -6,13 +6,13 @@
 /*   By: jdruba <jdruba@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 09:30:16 by jdruba            #+#    #+#             */
-/*   Updated: 2022/12/29 19:43:07 by jdruba           ###   ########.fr       */
+/*   Updated: 2023/01/03 13:02:52 by jdruba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <ctype.h>
 // #include <stdio.h>
-
+#include "libft.h"
 // it is possible to work without if else statements, here. But this is a
 // norme violation:
 // int	ft_isprint(int str)

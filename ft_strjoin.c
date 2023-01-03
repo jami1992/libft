@@ -6,13 +6,13 @@
 /*   By: jdruba <jdruba@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/20 22:11:15 by jdruba            #+#    #+#             */
-/*   Updated: 2023/01/02 16:57:31 by jdruba           ###   ########.fr       */
+/*   Updated: 2023/01/03 13:10:03 by jdruba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-
+// #include <stdlib.h>
+// #include <stdio.h>
+#include "libft.h"
 /*
 Description:
 Allocates (with malloc(3)) and returns a new string, which is the result of the 
@@ -37,25 +37,11 @@ Implementation:
 -	finally, the new string is returned.
 */
 
-static int	ft_strlen(const char *s)
-{
-	int	i;
-
-	i = 0;
-	if (s[0] == '\0')
-		return (1);
-	while (s[i] != '\0')
-	{
-		i++;
-	}
-	return (i);
-}
-
 char	*ft_strjoin(char const *s1, char const *s2)
 {
-	int		i;
-	int		j;
-	char	*p;
+	size_t		i;
+	size_t		j;
+	char		*p;
 
 	i = 0;
 	j = 0;

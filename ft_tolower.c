@@ -6,12 +6,13 @@
 /*   By: jdruba <jdruba@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 10:27:23 by jdruba            #+#    #+#             */
-/*   Updated: 2022/12/30 15:45:06 by jdruba           ###   ########.fr       */
+/*   Updated: 2023/01/03 13:04:46 by jdruba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <ctype.h>
 // #include <stdio.h>
+#include "libft.h"
 /*
 Description:
 The tolower function converts an uppercase letter to a corresponding lowercase

@@ -6,10 +6,11 @@
 /*   By: jdruba <jdruba@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 12:51:07 by jdruba            #+#    #+#             */
-/*   Updated: 2022/12/29 18:21:26 by jdruba           ###   ########.fr       */
+/*   Updated: 2023/01/03 13:01:51 by jdruba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 // Task can be solved with a one-liner, but this would be a violation of the
 // norme!
 // int	ft_isalpha(int c)

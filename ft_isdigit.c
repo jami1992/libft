@@ -6,13 +6,13 @@
 /*   By: jdruba <jdruba@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 16:38:23 by jdruba            #+#    #+#             */
-/*   Updated: 2022/12/29 18:22:22 by jdruba           ###   ########.fr       */
+/*   Updated: 2023/01/03 13:02:36 by jdruba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <ctype.h>
 // #include <stdio.h>
-
+#include "libft.h"
 // one-liner (norme violation)
 // int	ft_isdigit(int c)
 // {

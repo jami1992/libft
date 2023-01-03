@@ -6,13 +6,13 @@
 /*   By: jdruba <jdruba@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/12 21:40:07 by jan-michael       #+#    #+#             */
-/*   Updated: 2022/12/29 18:21:56 by jdruba           ###   ########.fr       */
+/*   Updated: 2023/01/03 13:02:25 by jdruba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <ctype.h>
 // #include <stdio.h>
-
+#include "libft.h"
 /*
 Description:
 The isascii() function tests for an ASCII character, which is any character 

@@ -6,10 +6,11 @@
 /*   By: jdruba <jdruba@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/23 10:40:28 by jdruba            #+#    #+#             */
-/*   Updated: 2022/12/30 21:51:41 by jdruba           ###   ########.fr       */
+/*   Updated: 2023/01/03 13:10:09 by jdruba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
 /*
 Description:
 strlcpy() copies up to dstsize - 1 characters from the string src to dst, 
@@ -37,26 +38,16 @@ Implementation:
 -	j is returned.
 */
 
-int	static	ft_strlen(const char *s)
+int	ft_strlcpy(char *dst, const char *src, size_t dstsize)
 {
-	int	i;
-
-	i = 0;
-	while (s[i] != '\0')
-		i++;
-	return (i);
-}
-
-int	ft_strlcpy(char *dst, const char *src, unsigned int dstsize)
-{
-	unsigned int	i;
-	unsigned int	j;
+	size_t	i;
+	size_t	j;
 
 	i = 0;
 	j = ft_strlen(src);
-	if (dstsize)
+	if ((size_t)dstsize)
 	{
-		while (src[i] && i < dstsize - 1)
+		while (src[i] && i < (size_t)dstsize - 1)
 		{
 			dst[i] = src[i];
 			i++;

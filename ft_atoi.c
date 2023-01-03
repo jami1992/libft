@@ -6,13 +6,13 @@
 /*   By: jdruba <jdruba@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/14 19:20:12 by jdruba            #+#    #+#             */
-/*   Updated: 2022/12/30 16:57:16 by jdruba           ###   ########.fr       */
+/*   Updated: 2023/01/03 13:00:49 by jdruba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include <stdio.h>
 // #include <stdlib.h>
-
+#include "libft.h"
 /*
 Description:
 The atoi() function converts the initial portion of the string pointed
