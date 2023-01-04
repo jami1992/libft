@@ -6,7 +6,7 @@
 /*   By: jdruba <jdruba@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/15 11:49:52 by jdruba            #+#    #+#             */
-/*   Updated: 2023/01/03 11:55:18 by jdruba           ###   ########.fr       */
+/*   Updated: 2023/01/04 12:51:43 by jdruba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,9 +31,9 @@ Therefore we work with a temporary array with length n char.
 From this array we copy to s1.
 
 Implementation:
-First while loop copies forwards (if the something, we have in src is
-"smaller" than the dst and if not more char from src are to be
-copied than dst has space for.
+First while loop copies backwards (if the something, we have in src is
+smaller than dst (please note: because of copying backwards, we have
+to add length to the pointer, first)
 Otherwise as much as possible is copied by iterating thourgh len from
 the beginning up to the point where len is reached (the number of 
 chars to copy).
@@ -43,30 +43,27 @@ dst has to be void-pointer-casted, as the function is of type void-pointer.
 void	*ft_memmove(void *dst, const void *src, size_t len)
 {
 	char		*dst_copy;
-	const char	*src_copy;
+	const char	*src_copy = src;
 
-	dst_copy = dst;
-	src_copy = src;
 	if (dst == src)
 		return (dst);
-	if (src_copy < dst_copy && dst_copy < src_copy + len)
+	dst_copy = dst;
+	if (src < dst)
 	{
-		dst_copy = dst_copy + len;
-		src_copy = src_copy + len;
-		while (len > 0 && len--)
-		{
+		dst_copy += len;
+		src_copy += len;
+		while (len && len--)
 			*--dst_copy = *--src_copy;
-		}
 	}
 	else
 	{
-		while (len > 0)
+		while (len)
 		{
 			*dst_copy++ = *src_copy++;
 			len--;
 		}
 	}
-	return ((void *) dst);
+	return (dst);
 }
 
 // int	main ()
