@@ -6,7 +6,7 @@
 /*   By: jdruba <jdruba@student.42wolfsburg.de>     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 13:45:29 by jdruba            #+#    #+#             */
-/*   Updated: 2023/01/03 16:10:59 by jdruba           ###   ########.fr       */
+/*   Updated: 2023/01/04 13:20:38 by jdruba           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,11 +29,11 @@ We want the last occurence of char c in s.
 The returned value will point to it (or will be NULL, if c is not in s)
 
 Implementation:
--	first, I copy c to avoid memory leaks and create an empty const char for
-	s, where I will copy s to, if c is found in s.
+-	first, I copy c to avoid memory leaks and create an empty const char *for
+	s, where I will store a pointer to s, if c is found.
 -	then, I need to fake an empty for()-conditional. I do it with a statement,
-	that will always be true: 1 is smaller than 10.
--	then, if the pointer to s is the same as c, s is stored in s_copy.
+	that will always be true: 42.
+-	then, if the pointer to s is the same as c, s_copy will point to s.
 -	if s points to a null determinator, then s_copy is casted to char pointer
 	and returned.
 - 	otherwise, s is increased and now comes the beauty: the loop just continues
