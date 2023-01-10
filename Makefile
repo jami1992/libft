@@ -18,6 +18,9 @@ $(NAME): $(OBJECTS)
 
 libs: libft.a
 
+%.o:%.c libft.h
+	${CC} ${CFLAGS} -c $< -o $@
+
 clean:
 	rm -rf $(OBJECTS)
 
